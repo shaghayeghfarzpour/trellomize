@@ -1,0 +1,15 @@
+colorama==0.4.6
+DateTime==5.5
+loguru==0.7.2
+markdown-it-py==3.0.0
+mdurl==0.1.2
+passlib==1.7.4
+prompt_toolkit==3.0.45
+Pygments==2.18.0
+pytz==2024.1
+rich==13.7.1
+setuptools==70.0.0
+uuid==1.30
+wcwidth==0.2.13
+win32-setctime==1.1.0
+zope.interface==6.4.post2
