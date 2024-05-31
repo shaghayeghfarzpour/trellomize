@@ -502,7 +502,7 @@ def main():
                                                       task.add_member(new_username)
                                                       logger.info(f"User '{new_username}' added to task '{task.title}' by project creator '{current_user.username}'")
                                                     else:
-                                                        console.print("[bold red]Error: user already exist!.[/]")
+                                                        console.print("[bold red]Error: user not exist in this project!.[/]")
                                                 else:
                                                     console.print(
                                                         "[bold red]Error:[/] user not found.")
