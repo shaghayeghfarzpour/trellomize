@@ -1,0 +1,46 @@
+2024-05-31 22:10:04.749 | INFO     | __main__:register_user:187 - User registered: shaghayegh
+2024-05-31 22:10:20.665 | INFO     | __main__:register_user:187 - User registered: sahar
+2024-05-31 22:10:34.146 | INFO     | __main__:register_user:187 - User registered: saman
+2024-05-31 22:10:46.487 | INFO     | __main__:login:200 - User logged in: shaghayegh
+2024-05-31 22:10:58.867 | INFO     | __main__:create_project:217 - Project created: project1 by shaghayegh
+2024-05-31 22:11:07.443 | INFO     | __main__:add_member_to_project:228 - User sahar added to project: project1
+2024-05-31 22:11:14.095 | INFO     | __main__:add_member_to_project:228 - User saman added to project: project1
+2024-05-31 22:11:24.535 | INFO     | __main__:remove_member_from_project:241 - User saman removed from project: project1
+2024-05-31 22:11:43.708 | INFO     | __main__:create_project:217 - Project created: project2 by shaghayegh
+2024-05-31 22:11:49.776 | INFO     | __main__:add_member_to_project:228 - User sahar added to project: project2
+2024-05-31 22:11:52.989 | INFO     | __main__:remove_project:235 - Project deleted: project2
+2024-05-31 22:12:57.471 | INFO     | __main__:create_task:153 - Task created: task1 by shaghayegh
+2024-05-31 22:12:57.484 | INFO     | __main__:main:455 - task1 by shaghayegh
+2024-05-31 22:13:22.602 | INFO     | __main__:create_task:153 - Task created: task2 by shaghayegh
+2024-05-31 22:13:22.605 | INFO     | __main__:main:455 - task2 by shaghayegh
+2024-05-31 22:13:46.756 | INFO     | __main__:main:493 - Task title changed to 'task1+' by user 'shaghayegh'
+2024-05-31 22:14:30.213 | INFO     | __main__:main:516 - Task priority changed to 'MEDIUM' by user 'shaghayegh'
+2024-05-31 22:14:34.818 | INFO     | __main__:main:536 - Comment added to task 'task1+' by user 'shaghayegh'
+2024-05-31 22:14:41.013 | INFO     | __main__:main:536 - Comment added to task 'task1+' by user 'shaghayegh'
+2024-05-31 22:16:06.015 | INFO     | __main__:create_project:217 - Project created: project2 by shaghayegh
+2024-05-31 22:16:12.257 | INFO     | __main__:add_member_to_project:228 - User saman added to project: project2
+2024-05-31 22:16:17.317 | INFO     | __main__:add_member_to_project:228 - User sahar added to project: project2
+2024-05-31 22:16:47.518 | INFO     | __main__:create_task:153 - Task created: task1 by shaghayegh
+2024-05-31 22:16:47.520 | INFO     | __main__:main:455 - task1 by shaghayegh
+2024-05-31 22:17:02.576 | INFO     | __main__:main:503 - User 'saman' added to task 'task1' by project creator 'shaghayegh'
+2024-05-31 22:17:15.513 | INFO     | __main__:main:536 - Comment added to task 'task1' by user 'shaghayegh'
+2024-05-31 22:17:24.358 | INFO     | __main__:main:536 - Comment added to task 'task1' by user 'shaghayegh'
+2024-05-31 22:17:31.301 | INFO     | __main__:main:545 - Comment removed from task 'task1' by user 'shaghayegh'
+2024-05-31 22:18:23.576 | INFO     | __main__:login:200 - User logged in: saman
+2024-05-31 22:18:32.908 | INFO     | __main__:create_project:217 - Project created: p1 by saman
+2024-05-31 22:18:42.030 | INFO     | __main__:add_member_to_project:228 - User sahar added to project: p1
+2024-05-31 22:18:45.642 | INFO     | __main__:add_member_to_project:228 - User shaghayegh added to project: p1
+2024-05-31 22:18:49.543 | INFO     | __main__:remove_member_from_project:241 - User shaghayegh removed from project: p1
+2024-05-31 22:19:28.612 | INFO     | __main__:create_task:153 - Task created: task_aval by saman
+2024-05-31 22:19:28.622 | INFO     | __main__:main:455 - task_aval by saman
+2024-05-31 22:20:16.924 | INFO     | __main__:main:523 - Task status changed to 'DOING' by user 'saman'
+2024-05-31 22:20:26.372 | INFO     | __main__:main:516 - Task priority changed to 'LOW' by user 'saman'
+2024-05-31 22:20:50.758 | INFO     | __main__:main:536 - Comment added to task 'task_aval' by user 'saman'
+2024-05-31 22:21:03.107 | INFO     | __main__:main:536 - Comment added to task 'task_aval' by user 'saman'
+2024-05-31 22:21:07.678 | INFO     | __main__:main:545 - Comment removed from task 'task_aval' by user 'saman'
+2024-05-31 22:21:46.261 | INFO     | __main__:main:503 - User 'sahar' added to task 'task_aval' by project creator 'saman'
+2024-05-31 22:24:44.283 | INFO     | __main__:login:200 - User logged in: sahar
+2024-05-31 22:24:52.648 | INFO     | __main__:create_project:217 - Project created: p5 by sahar
+2024-05-31 22:24:59.012 | INFO     | __main__:add_member_to_project:228 - User saman added to project: p5
+2024-05-31 22:25:30.457 | INFO     | __main__:create_task:153 - Task created: task1 by sahar
+2024-05-31 22:25:30.459 | INFO     | __main__:main:455 - task1 by sahar
