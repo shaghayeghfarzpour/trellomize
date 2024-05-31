@@ -236,14 +236,13 @@ class UserManager:
         console.print("[green]Project deleted successfully![/green]")
 
     def remove_member_from_project(self, project, username):
-        for user in project.members:
-            if user.username == username:
-                project.remove_member(user)
-                logger.info(f"User {username} removed from project: {project.title}")
-                console.print(f"[green]User {username} removed from the project![/green]")
-                return
-        logger.warning(f"Failed to remove user {username} from project: {project.title}. User not found.")
-        console.print("[red]Error: User not found in the project.[/red]")
+        if username in project.members:
+            project.remove_member(username)
+            logger.info(f"User {username} removed from project: {project.title}")
+            console.print(f"[green]User {username} removed from the project![/green]")
+        else:
+            logger.warning(f"Failed to remove user {username} from project: {project.title}. User not found.")
+            console.print("[red]Error: User not found in the project.[/red]")
 
     def load_data(self):
         try:
@@ -371,8 +370,8 @@ def main():
 
                 while True:
                     action = Prompt.ask(
-                        "Select an action: (1) Add Member, (2) Remove Project (3) Back",
-                        choices=["1", "2", "3"])
+                        "Select an action: (1) Add Member, (2) Remove Member, (3) Remove Project (4) Back",
+                        choices=["1", "2", "3", "4"])
 
                     if action == "1":
                         username = Prompt.ask("Enter username to add to the project:")
@@ -383,11 +382,15 @@ def main():
                                 flag = True
                         if flag == False:
                             console.print("[red]Error: user not found[/red]")
-
+                            
                     elif action == "2":
-                        user_manager.remove_project(project)
+                        username = Prompt.ask("Enter username to remove from the project:")
+                        user_manager.remove_member_from_project(project, username)        
 
                     elif action == "3":
+                        user_manager.remove_project(project)
+
+                    elif action == "4":
                         break
 
             elif choice == "2":
@@ -412,10 +415,10 @@ def main():
 
                 console.print(working_table)
 
-                projects = [project.title for project in user_manager.projects]
+                projects = [project.title for project in working_projects]
                 project_name = Prompt.ask("Select a project:", choices=projects)
-                selected_project = next((project for project in user_manager.projects if project.title == project_name),
-                                        None)
+                selected_project = next((project for project in working_projects if project.title == project_name), None)
+
                 
                 if selected_project:
                     while True:
@@ -549,8 +552,7 @@ def main():
 
                                             console.print("Task attributes updated successfully!")
                                     else:
-                                        console.print(
-                                            "[bold red]Error: task not found![/bold red]")
+                                        console.print("")
 
                         elif action == "3":
                             break
