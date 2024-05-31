@@ -449,7 +449,7 @@ def main():
                                                          choices=["BACKLOG", "TODO", "DOING", "DONE", "ARCHIVED"], default="BACKLOG")
 
                                 selected_project.create_task(task_title, assignees, task_priority, task_status, task_description)
-                                logger.info(f" {task_title}by{current_user.username}")
+                                logger.info(f"{task_title} by {current_user.username}")
                                 user_manager.save_data()
 
                             else:
@@ -533,10 +533,6 @@ def main():
                                                         logger.info(f"Comment added to task '{task.title}' by user '{current_user.username}'")
 
                                             elif choice == "6":
-                                                if current_user.username != selected_project.creator:
-                                                    console.print(
-                                                        "[bold red]Error:[/] Only the project creator can assign tasks to users. Access denied.")
-                                                    continue
                                                 comments_table = task.generate_comments_table()
                                                 console.print(comments_table)
                                                 comment_id=Prompt.ask("select a comment to remove:")
